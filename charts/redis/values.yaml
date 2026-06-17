@@ -11,6 +11,10 @@ redisStandalone:
     secretKey: ""
   # serviceType must be one of: ClusterIP, NodePort, LoadBalancer
   serviceType: ClusterIP
+  serviceConfig:
+    annotations: {}
+    headless:
+      additionalAnnotations: {}
   resources: {}
     # requests:
     #   cpu: 100m

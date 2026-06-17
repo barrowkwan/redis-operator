@@ -109,6 +109,9 @@ helm delete <my-release> --namespace <namespace>
 | redisCluster.redisSecret.secretKey | string | `""` |  |
 | redisCluster.redisSecret.secretName | string | `""` |  |
 | redisCluster.resources | object | `{}` |  |
+| redisCluster.serviceConfig | object | `{"annotations":{},"headless":{"additionalAnnotations":{}}}` | Extra annotations for the Redis cluster CR services, mirroring the CRD's `spec.kubernetesConfig.service` field. Keys are only rendered when set, so leaving them empty keeps the default service definition unchanged. |
+| redisCluster.serviceConfig.annotations | object | `{}` | Annotations added to the Redis cluster service. |
+| redisCluster.serviceConfig.headless.additionalAnnotations | object | `{}` | Annotations added to the headless Redis cluster service. |
 | redisCluster.serviceType | string | `"ClusterIP"` |  |
 | redisCluster.tag | string | `"v7.0.15"` |  |
 | redisExporter.enabled | bool | `false` |  |

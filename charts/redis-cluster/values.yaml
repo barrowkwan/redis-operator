@@ -11,6 +11,10 @@ redisCluster:
   imagePullSecrets: {}
     # - name:  Secret with Registry credentials
   serviceType: ClusterIP
+  serviceConfig:
+    annotations: {}
+    headless:
+      additionalAnnotations: {}
   redisSecret:
     secretName: ""
     secretKey: ""
